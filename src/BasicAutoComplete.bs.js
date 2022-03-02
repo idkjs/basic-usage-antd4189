@@ -25,19 +25,34 @@ function BasicAutoComplete(Props) {
   var setOptions = match$1[1];
   var options = match$1[0];
   var onSearch = function (searchText) {
+    console.log("searchText string", searchText);
+    if (typeof searchText === "string") {
+      Curry._1(setOptions, (function (param) {
+              return [];
+            }));
+    } else {
+      var options = [
+        mockVal(searchText, undefined, undefined),
+        mockVal(searchText, 2, undefined),
+        mockVal(searchText, 3, undefined)
+      ];
+      Curry._1(setOptions, (function (param) {
+              return options;
+            }));
+    }
     if (searchText === "") {
-      var options = [];
+      var options$1 = [];
       return Curry._1(setOptions, (function (param) {
-                    return options;
+                    return options$1;
                   }));
     }
-    var options$1 = [
+    var options$2 = [
       mockVal(searchText, undefined, undefined),
       mockVal(searchText, 2, undefined),
       mockVal(searchText, 3, undefined)
     ];
     return Curry._1(setOptions, (function (param) {
-                  return options$1;
+                  return options$2;
                 }));
   };
   var onSelect = function (data, e) {
@@ -56,9 +71,9 @@ function BasicAutoComplete(Props) {
                   onSearch: onSearch,
                   onSelect: onSelect,
                   style: {
-                    width: "200"
+                    width: "200px"
                   }
-                }), React.createElement("br", undefined), React.createElement(Antd.AutoComplete, {
+                }), React.createElement("br", undefined), React.createElement("br", undefined), React.createElement(Antd.AutoComplete, {
                   options: options,
                   placeholder: "control mode",
                   value: match[0],
@@ -66,7 +81,7 @@ function BasicAutoComplete(Props) {
                   onSearch: onSearch,
                   onSelect: onSelect,
                   style: {
-                    width: "200"
+                    width: "200px"
                   }
                 }));
 }
