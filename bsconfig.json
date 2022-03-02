@@ -1,0 +1,20 @@
+{
+  "name": "example",
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": {
+    "dir": "src",
+    "subdirs": true
+  },
+  "bsc-flags": ["-bs-super-errors"],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": ["@rescript/react","rescript-classnames", "bs-css-emotion"]
+}

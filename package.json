@@ -1,0 +1,36 @@
+{
+  "title": "Basic Usage - antd@4.18.9",
+  "scripts": {
+    "start": "react-scripts start",
+    "watch": "rescript build -w",
+    "build": "rescript build",
+    "test": "rescript clean;rescript build",
+    "clean": "rescript clean"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "react-scripts": "1.0.0",
+    "rescript": "^9.1.4",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "@ant-design/icons": "latest",
+    "@rescript/react": "^0.10.3",
+    "antd": "4.18.9",
+    "bs-css-emotion": "^4.1.1",
+    "bs-moment": "^0.6.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "^4.0.0",
+    "rescript-classnames": "^6.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "name": "basic-usage-antd4189",
+  "description": null,
+  "version": "0.0.0"
+}
